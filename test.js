@@ -1,7 +1,15 @@
-var expect = require('chai').expect;
-
-describe('A basic test', function() {
-	it('should pass when everything is okay', function() {
-		expect(true).to.be.true;
-	});
-});
+(function() {
+    'use strict';
+      
+    assertEqual(add(3,4), 7);
+    
+       
+    function add(a, b) {
+        return a + b;        
+    }
+    
+    function assertEqual(expected, actual) {
+        if(actual !== expected) throw new Error('Expected ' + expected + ', but got ' + actual);
+    }
+    
+}());
